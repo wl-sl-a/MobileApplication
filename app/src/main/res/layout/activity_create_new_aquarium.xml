@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateNewAquariumActivity">
+
+    <EditText android:id="@+id/editTextManufacturer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Enter manufacturer"
+        android:layout_margin="10dp"
+        />
+
+    <EditText android:id="@+id/editTextVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextManufacturer"
+        android:hint="Enter Volume"
+        android:layout_margin="10dp"
+        />
+
+    <EditText android:id="@+id/editTextLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextVolume"
+        android:hint="Enter Length"
+        android:layout_margin="10dp"
+        />
+
+    <EditText android:id="@+id/editTextWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLength"
+        android:hint="Enter Width"
+        android:layout_margin="10dp"
+        />
+
+    <EditText android:id="@+id/editTextHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextWidth"
+        android:hint="Enter Height"
+        android:layout_margin="10dp"
+        />
+
+    <Button android:id="@+id/createButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextHeight"
+        android:hint="Create"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        />
+
+    <Button android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createButton"
+        android:hint="Delete"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
