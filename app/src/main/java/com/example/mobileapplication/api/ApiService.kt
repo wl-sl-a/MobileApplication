@@ -14,7 +14,7 @@ interface ApiService {
     fun login(@Body request: LoginRequest): Call<LoginResponse>
 
     @GET(Constants.AQUARIUMS_URL)
-    fun fetchPosts(): Call<MutableList<Aquarium>>
+    fun fetchAquariums(): Call<MutableList<Aquarium>>
 
     @POST(Constants.AQUARIUMS_URL)
     fun addAquarium(@Body request: AquariumRequest): Call<AquariumResponse>

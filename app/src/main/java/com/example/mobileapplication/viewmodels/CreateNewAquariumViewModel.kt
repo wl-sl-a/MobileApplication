@@ -12,40 +12,40 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class CreateNewAquariumViewModel: ViewModel() {
-    lateinit var createNewUserLiveData: MutableLiveData<AquariumResponse?>
-    lateinit var loadUserData: MutableLiveData<AquariumResponse?>
-    lateinit var deleteUserLiveData: MutableLiveData<AquariumResponse?>
+    lateinit var createNewAquariumLiveData: MutableLiveData<AquariumResponse?>
+    lateinit var loadAquariumData: MutableLiveData<AquariumResponse?>
+    lateinit var deleteAquariumLiveData: MutableLiveData<AquariumResponse?>
     lateinit var repository: AquariumRepository
 
     init {
-        createNewUserLiveData = MutableLiveData()
-        loadUserData = MutableLiveData()
-        deleteUserLiveData = MutableLiveData()
+        createNewAquariumLiveData = MutableLiveData()
+        loadAquariumData = MutableLiveData()
+        deleteAquariumLiveData = MutableLiveData()
         repository = AquariumRepository()
     }
 
     fun getCreateNewAquariumObservable(): MutableLiveData<AquariumResponse?> {
-        return  createNewUserLiveData
+        return  createNewAquariumLiveData
     }
 
     fun getDeleteAquariumObservable(): MutableLiveData<AquariumResponse?> {
-        return  deleteUserLiveData
+        return  deleteAquariumLiveData
     }
 
     fun getLoadAquariumObservable(): MutableLiveData<AquariumResponse?> {
-        return  loadUserData
+        return  loadAquariumData
     }
 
     fun createAquarium(context: Context, request: AquariumRequest) {
         repository.createAquarium(context, request).enqueue(object : Callback<AquariumResponse?> {
             override fun onFailure(call: Call<AquariumResponse?>, t: Throwable) {
-                createNewUserLiveData.postValue(null)
+                createNewAquariumLiveData.postValue(null)
             }
             override fun onResponse(call: Call<AquariumResponse?>, response: Response<AquariumResponse?>) {
                 if(response.isSuccessful) {
-                    createNewUserLiveData.postValue(response.body())
+                    createNewAquariumLiveData.postValue(response.body())
                 } else {
-                    createNewUserLiveData.postValue(null)
+                    createNewAquariumLiveData.postValue(null)
                 }
             }
         })

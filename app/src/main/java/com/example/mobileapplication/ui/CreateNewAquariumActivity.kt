@@ -27,9 +27,9 @@ class CreateNewAquariumActivity : AppCompatActivity() {
     private fun createAquariumObservable() {
         viewModel.getCreateNewAquariumObservable().observe(this, Observer <AquariumResponse?>{
             if(it == null) {
-                Toast.makeText(this@CreateNewAquariumActivity, "Failed to create/update new user...", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@CreateNewAquariumActivity, "Failed to create/update new aquarium...", Toast.LENGTH_LONG).show()
             } else {
-                Toast.makeText(this@CreateNewAquariumActivity, "Successfully created/updated user...", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@CreateNewAquariumActivity, "Successfully created/updated aquarium...", Toast.LENGTH_LONG).show()
                 finish()
             }
         })

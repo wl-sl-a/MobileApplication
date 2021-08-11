@@ -83,6 +83,6 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
         })
-        viewModel.getUsersList(applicationContext)
+        viewModel.getAquariumsList(applicationContext)
     }
 }

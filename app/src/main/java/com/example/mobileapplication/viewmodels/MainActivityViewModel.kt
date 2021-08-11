@@ -23,8 +23,8 @@ class MainActivityViewModel: ViewModel() {
         return recyclerListData
     }
 
-    fun getUsersList(context: Context) {
-        repository.getUsersList(context)
+    fun getAquariumsList(context: Context) {
+        repository.getAquariumsList(context)
             .enqueue(object : Callback<MutableList<Aquarium>> {
                 override fun onFailure(call: Call<MutableList<Aquarium>>, t: Throwable) {
                     recyclerListData.postValue(null)

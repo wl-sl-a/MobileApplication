@@ -12,7 +12,7 @@ import com.example.mobileapplication.api.models.Aquarium
 import kotlinx.android.synthetic.main.aquarium_layout.view.*
 
 
-class AquariumAdapter(private val context: Context, var movieList: MutableList<Aquarium>):
+class AquariumAdapter(private val context: Context, var aquariumList: MutableList<Aquarium>):
     RecyclerView.Adapter<AquariumAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -32,15 +32,15 @@ class AquariumAdapter(private val context: Context, var movieList: MutableList<A
         return MyViewHolder(itemView)
     }
 
-    override fun getItemCount() = movieList.size
+    override fun getItemCount() = aquariumList.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val listItem = movieList[position]
+        val listItem = aquariumList[position]
         holder.bind(listItem)
 
-        holder.txt_id.text = movieList[position].id.toString()
-        holder.txt_manufacturer.text = movieList[position].manufacturer
-        holder.txt_volume.text = movieList[position].volume.toString()
+        holder.txt_id.text = aquariumList[position].id.toString()
+        holder.txt_manufacturer.text = aquariumList[position].manufacturer
+        holder.txt_volume.text = aquariumList[position].volume.toString()
     }
 
 }

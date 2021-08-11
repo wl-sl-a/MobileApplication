@@ -18,8 +18,8 @@ class AquariumRepository {
         return apiClient.getApiService(context).addAquarium(request)
     }
 
-    fun getUsersList(context: Context):Call<MutableList<Aquarium>>{
-        return apiClient.getApiService(context).fetchPosts();
+    fun getAquariumsList(context: Context):Call<MutableList<Aquarium>>{
+        return apiClient.getApiService(context).fetchAquariums();
     }
 
 }
