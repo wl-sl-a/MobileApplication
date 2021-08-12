@@ -13,27 +13,15 @@ import retrofit2.Response
 
 class CreateNewAquariumViewModel: ViewModel() {
     lateinit var createNewAquariumLiveData: MutableLiveData<AquariumResponse?>
-    lateinit var loadAquariumData: MutableLiveData<AquariumResponse?>
-    lateinit var deleteAquariumLiveData: MutableLiveData<AquariumResponse?>
     lateinit var repository: AquariumRepository
 
     init {
         createNewAquariumLiveData = MutableLiveData()
-        loadAquariumData = MutableLiveData()
-        deleteAquariumLiveData = MutableLiveData()
         repository = AquariumRepository()
     }
 
     fun getCreateNewAquariumObservable(): MutableLiveData<AquariumResponse?> {
         return  createNewAquariumLiveData
-    }
-
-    fun getDeleteAquariumObservable(): MutableLiveData<AquariumResponse?> {
-        return  deleteAquariumLiveData
-    }
-
-    fun getLoadAquariumObservable(): MutableLiveData<AquariumResponse?> {
-        return  loadAquariumData
     }
 
     fun createAquarium(context: Context, request: AquariumRequest) {

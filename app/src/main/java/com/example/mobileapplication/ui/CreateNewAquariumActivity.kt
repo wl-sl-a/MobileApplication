@@ -1,8 +1,9 @@
 package com.example.mobileapplication.ui
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mobileapplication.R
@@ -10,6 +11,7 @@ import com.example.mobileapplication.api.requests.AquariumRequest
 import com.example.mobileapplication.api.responses.AquariumResponse
 import com.example.mobileapplication.viewmodels.CreateNewAquariumViewModel
 import kotlinx.android.synthetic.main.activity_create_new_aquarium.*
+
 
 class CreateNewAquariumActivity : AppCompatActivity() {
     lateinit var viewModel: CreateNewAquariumViewModel
@@ -30,6 +32,8 @@ class CreateNewAquariumActivity : AppCompatActivity() {
                 Toast.makeText(this@CreateNewAquariumActivity, "Failed to create/update new aquarium...", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this@CreateNewAquariumActivity, "Successfully created/updated aquarium...", Toast.LENGTH_LONG).show()
+                val refresh = Intent(this, MainActivity::class.java)
+                startActivity(refresh)
                 finish()
             }
         })

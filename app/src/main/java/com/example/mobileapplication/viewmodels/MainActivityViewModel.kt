@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mobileapplication.api.ApiClient
 import com.example.mobileapplication.api.models.Aquarium
+import com.example.mobileapplication.api.responses.AquariumResponse
 import com.example.mobileapplication.repositories.AquariumRepository
 import retrofit2.Call
 import retrofit2.Callback
@@ -12,10 +13,12 @@ import retrofit2.Response
 
 class MainActivityViewModel: ViewModel() {
     var recyclerListData: MutableLiveData<MutableList<Aquarium>>
+    var deletedAquariumLiveData: MutableLiveData<AquariumResponse?>
     var repository: AquariumRepository
 
     init {
         recyclerListData = MutableLiveData()
+        deletedAquariumLiveData = MutableLiveData()
         repository = AquariumRepository()
     }
 
@@ -37,5 +40,26 @@ class MainActivityViewModel: ViewModel() {
                     }
                 }
             })
+    }
+
+    fun deleteAquariumObserverable(): MutableLiveData<AquariumResponse?>{
+        return deletedAquariumLiveData
+    }
+
+    fun deleteAquarium(context: Context, aquariumId: Int){
+       repository.deleteAquarium(context, aquariumId)
+        .enqueue(object : Callback<AquariumResponse?> {
+            override fun onFailure(call: Call<AquariumResponse?>, t: Throwable) {
+                deletedAquariumLiveData.postValue(null)
+            }
+
+            override fun onResponse(call: Call<AquariumResponse?>, response: Response<AquariumResponse?>) {
+                if(response.isSuccessful) {
+                    deletedAquariumLiveData.postValue(response.body())
+                } else {
+                    deletedAquariumLiveData.postValue(null)
+                }
+            }
+        })
     }
 }

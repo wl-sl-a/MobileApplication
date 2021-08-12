@@ -11,13 +11,16 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sessionManager = SessionManager(this)
+        sessionManager.terminateSession()
         val intent: Intent
         if(sessionManager.fetchAuthToken() == null){
             intent = Intent(applicationContext, LoginActivity::class.java)
             startActivity(intent);
+            finish()
         }else{
             intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent);
+            finish()
         }
         }
 }

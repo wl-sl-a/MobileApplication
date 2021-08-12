@@ -51,7 +51,6 @@ class LoginActivity : AppCompatActivity(){
 
                         val intent = Intent(applicationContext, MainActivity::class.java)
                         startActivity(intent);
-
                     } else {
                         Toast.makeText(applicationContext, "error!", Toast.LENGTH_SHORT).show()
                     }

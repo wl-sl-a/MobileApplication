@@ -19,7 +19,10 @@ class AquariumRepository {
     }
 
     fun getAquariumsList(context: Context):Call<MutableList<Aquarium>>{
-        return apiClient.getApiService(context).fetchAquariums();
+        return apiClient.getApiService(context).fetchAquariums()
     }
 
+    fun deleteAquarium(context: Context, aquariumId: Int): Call<AquariumResponse>{
+        return apiClient.getApiService(context).deleteAquarium(aquariumId)
+    }
 }

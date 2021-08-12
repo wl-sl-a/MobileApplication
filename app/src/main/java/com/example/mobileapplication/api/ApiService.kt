@@ -16,6 +16,15 @@ interface ApiService {
     @GET(Constants.AQUARIUMS_URL)
     fun fetchAquariums(): Call<MutableList<Aquarium>>
 
+    @GET(Constants.AQUARIUMS_URL+"/{id}")
+    fun getAquarium(@Path("id") id: Int): Call<AquariumResponse>
+
     @POST(Constants.AQUARIUMS_URL)
     fun addAquarium(@Body request: AquariumRequest): Call<AquariumResponse>
+
+    @PUT(Constants.AQUARIUMS_URL+"/{id}")
+    fun editAquarium(@Path("id") id: Int, @Body request: AquariumRequest): Call<AquariumResponse>
+
+    @DELETE(Constants.AQUARIUMS_URL+"/{id}")
+    fun deleteAquarium(@Path("id") id: Int): Call<AquariumResponse>
 }

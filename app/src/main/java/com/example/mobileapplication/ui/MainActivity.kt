@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -16,10 +17,13 @@ import com.example.mobileapplication.api.ApiClient
 import com.example.mobileapplication.api.models.Aquarium
 import com.example.mobileapplication.api.responses.AquariumResponse
 import com.example.mobileapplication.ui.adapters.AquariumAdapter
+import com.example.mobileapplication.utils.AquariumManager
 import com.example.mobileapplication.utils.SessionManager
 import com.example.mobileapplication.viewmodels.MainActivityViewModel
 import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.aquarium_layout.*
+import kotlinx.android.synthetic.main.aquarium_layout.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         btnAdd.setOnClickListener {
             startActivity(Intent(this@MainActivity, CreateNewAquariumActivity::class.java))
+            Toast.makeText(this@MainActivity, AquariumManager(this).fetchId(), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -85,4 +90,18 @@ class MainActivity : AppCompatActivity() {
         })
         viewModel.getAquariumsList(applicationContext)
     }
+
+    private fun deleteAquarium(id: Int) {
+        viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        viewModel.deleteAquariumObserverable().observe(this, Observer <AquariumResponse?>{
+            if(it == null) {
+                Toast.makeText(this@MainActivity, "Failed to delete aquarium...", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this@MainActivity, "Successfully deleted aquarium...", Toast.LENGTH_LONG).show()
+                finish()
+            }
+        })
+        viewModel.deleteAquarium(applicationContext, id)
+    }
 }
+
