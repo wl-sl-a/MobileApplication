@@ -25,4 +25,8 @@ class AquariumRepository {
     fun deleteAquarium(context: Context, aquariumId: Int): Call<AquariumResponse>{
         return apiClient.getApiService(context).deleteAquarium(aquariumId)
     }
+
+    fun editAquarium(context: Context, aquariumId: Int, request: AquariumRequest): Call<AquariumResponse>{
+        return apiClient.getApiService(context).editAquarium(aquariumId, request)
+    }
 }

@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getAquariumsList(applicationContext)
     }
 
-    private fun deleteAquarium(id: Int) {
+    fun deleteAquarium(id: Int) {
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
         viewModel.deleteAquariumObserverable().observe(this, Observer <AquariumResponse?>{
             if(it == null) {
