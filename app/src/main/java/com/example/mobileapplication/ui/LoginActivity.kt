@@ -49,8 +49,9 @@ class LoginActivity : AppCompatActivity(){
                     if (loginResponse != null && loginResponse.token != null) {
                         sessionManager.saveAuthToken(loginResponse.token)
 
-                        val intent = Intent(applicationContext, MainActivity::class.java)
+                        val intent = Intent(applicationContext, MenuActivity::class.java)
                         startActivity(intent);
+                        this@LoginActivity.finish()
                     } else {
                         Toast.makeText(applicationContext, "error!", Toast.LENGTH_SHORT).show()
                     }

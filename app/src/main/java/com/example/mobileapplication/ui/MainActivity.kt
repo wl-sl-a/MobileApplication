@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(applicationContext, LoginActivity::class.java)
         startActivity(intent);
+        this@MainActivity.finish()
     }
 
     fun initViewModel(){

@@ -17,7 +17,7 @@ class StartActivity : AppCompatActivity() {
             startActivity(intent);
             finish()
         }else{
-            intent = Intent(applicationContext, MainActivity::class.java)
+            intent = Intent(applicationContext, MenuActivity::class.java)
             startActivity(intent);
             finish()
         }
