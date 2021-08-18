@@ -1,13 +1,21 @@
 package com.example.mobileapplication.ui
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.TimePicker
+import androidx.annotation.RequiresApi
 import com.example.mobileapplication.R
 import com.example.mobileapplication.utils.SessionManager
 import kotlinx.android.synthetic.main.activity_menu.*
+import java.util.*
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
@@ -25,6 +33,9 @@ class MenuActivity : AppCompatActivity() {
         feedingButton.setOnClickListener {
             val intent = Intent(applicationContext, FeedingActivity::class.java)
             startActivity(intent);
+        }
+        rezervButton.setOnClickListener {
+
         }
     }
 

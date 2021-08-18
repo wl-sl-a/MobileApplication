@@ -15,8 +15,11 @@ data class Feeding(
     @SerializedName("aquariumId")
     var aquariumId: Int? = null,
 
-    @SerializedName("dataTime")
-    var dateTime: Date? = null,
+    @SerializedName("date")
+    var date: String? = null,
+
+    @SerializedName("time")
+    var time: String? = null,
 
     @SerializedName("nameCompany")
     var nameCompany: String? = null

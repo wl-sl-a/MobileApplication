@@ -10,89 +10,173 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayoutFeeding"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="219dp">
+
+        <TextView
+            android:id="@+id/labelFeedingId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="12dp"
+            android:text="Feeding Id:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_id_f"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_id_f"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="8dp"
             android:text="id"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelKind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="8dp"
+            android:text="Kind:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_kind"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelFeedingId" />
 
         <TextView
             android:id="@+id/txt_kind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="28dp"
             android:text="Kind of feed"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_id_f" />
+            app:layout_constraintTop_toTopOf="@id/txt_id_f" />
+
+        <TextView
+            android:id="@+id/labelDose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Dose:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_dose"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelKind" />
 
         <TextView
             android:id="@+id/txt_dose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="28dp"
             android:text="Dose"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_kind" />
+            app:layout_constraintTop_toTopOf="@+id/txt_kind" />
+
+        <TextView
+            android:id="@+id/labelAqId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Aquarium Id:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_dose"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelDose" />
 
         <TextView
             android:id="@+id/txt_aqua_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="28dp"
             android:text="Aquarium Id"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="normal"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_dose" />
+            app:layout_constraintTop_toTopOf="@+id/txt_dose" />
 
         <TextView
-            android:id="@+id/txt_date_time"
+            android:id="@+id/labelDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Date time"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="normal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Date:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_dose"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_aqua_id" />
+            app:layout_constraintTop_toBottomOf="@id/labelAqId" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="30dp"
+            android:text="date"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_aqua_id" />
+
+        <TextView
+            android:id="@+id/labeltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="28dp"
+            android:text="Time:"
+            app:layout_constraintEnd_toStartOf="@+id/txt_dose"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelDate" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="30dp"
+            android:text="time"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_date" />
 
         <Button
-            android:id="@+id/btnEdit"
+            android:id="@+id/btnEditF"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="160dp"
             android:background="@drawable/ic_baseline_edit_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-            android:id="@+id/btnDel"
+            android:id="@+id/btnDelF"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="160dp"
             android:background="@drawable/ic_baseline_delete_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/btnEdit" />
+            app:layout_constraintEnd_toEndOf="@id/btnEditF" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

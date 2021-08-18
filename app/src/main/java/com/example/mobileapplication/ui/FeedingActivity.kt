@@ -75,6 +75,7 @@ class FeedingActivity : AppCompatActivity() {
             if(it == null) {
                 Toast.makeText(this@FeedingActivity, "no result found...", Toast.LENGTH_LONG).show()
             } else {
+                println("PPPPPPPPPPPPPPPPPPPP"+it[0])
                 adapter = FeedingAdapter(baseContext, it)
                 adapter.notifyDataSetChanged()
                 recyclerFeedingList.adapter = adapter

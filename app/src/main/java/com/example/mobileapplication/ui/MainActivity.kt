@@ -91,18 +91,5 @@ class MainActivity : AppCompatActivity() {
         })
         viewModel.getAquariumsList(applicationContext)
     }
-
-    fun deleteAquarium(id: Int) {
-        viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        viewModel.deleteAquariumObserverable().observe(this, Observer <AquariumResponse?>{
-            if(it == null) {
-                Toast.makeText(this@MainActivity, "Failed to delete aquarium...", Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(this@MainActivity, "Successfully deleted aquarium...", Toast.LENGTH_LONG).show()
-                finish()
-            }
-        })
-        viewModel.deleteAquarium(applicationContext, id)
-    }
 }
 

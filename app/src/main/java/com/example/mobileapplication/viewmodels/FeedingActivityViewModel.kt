@@ -33,9 +33,31 @@ class FeedingActivityViewModel: ViewModel() {
                 }
                 override fun onResponse(call: Call<MutableList<Feeding>>, response: Response<MutableList<Feeding>>) {
                     if(response.isSuccessful) {
+                        println("KKKLLLLLLL"+response.body())
                         recyclerListData.postValue(response.body())
                     } else {
                         recyclerListData.postValue(null)
+                    }
+                }
+            })
+    }
+
+    fun deleteFeedingObserverable(): MutableLiveData<FeedingResponse?>{
+        return deletedFeedingLiveData
+    }
+
+    fun deleteFeeding(context: Context, feedingId: Int){
+        repository.deleteFeeding(context, feedingId)
+            .enqueue(object : Callback<FeedingResponse?> {
+                override fun onFailure(call: Call<FeedingResponse?>, t: Throwable) {
+                    deletedFeedingLiveData.postValue(null)
+                }
+
+                override fun onResponse(call: Call<FeedingResponse?>, response: Response<FeedingResponse?>) {
+                    if(response.isSuccessful) {
+                        deletedFeedingLiveData.postValue(response.body())
+                    } else {
+                        deletedFeedingLiveData.postValue(null)
                     }
                 }
             })

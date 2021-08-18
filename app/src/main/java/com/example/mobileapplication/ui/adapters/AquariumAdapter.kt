@@ -22,9 +22,11 @@ class AquariumAdapter(private val context: Context, var aquariumList: MutableLis
     RecyclerView.Adapter<AquariumAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val txt_id: TextView = itemView.txt_id
-        val txt_manufacturer: TextView = itemView.txt_manufacrurer
+        val txt_manufacturer: TextView = itemView.txt_manufacturer
         val txt_volume: TextView = itemView.txt_volume
-
+        val txt_height: TextView = itemView.txt_height
+        val txt_width: TextView = itemView.txt_width
+        val txt_length: TextView = itemView.txt_length
 
         fun bind(listItem: Aquarium) {
             itemView.setOnClickListener {
@@ -41,11 +43,11 @@ class AquariumAdapter(private val context: Context, var aquariumList: MutableLis
             itemView.btnEdit.setOnClickListener{
                 var intent = Intent(it.context, EditAquariumActivity::class.java)
                 intent.putExtra("id", itemView.txt_id.text.toString())
-                intent.putExtra("manufacturer", itemView.txt_manufacrurer.text.toString())
+                intent.putExtra("manufacturer", itemView.txt_manufacturer.text.toString())
                 intent.putExtra("volume", itemView.txt_volume.text.toString())
-                intent.putExtra("height", itemView.txt_volume.toString())
-                intent.putExtra("width", itemView.txt_volume.text.toString())
-                intent.putExtra("length", itemView.txt_volume.text.toString())
+                intent.putExtra("height", itemView.txt_height.text.toString())
+                intent.putExtra("width", itemView.txt_width.text.toString())
+                intent.putExtra("length", itemView.txt_length.text.toString())
                 it.context.startActivity(intent)
             }
         }
@@ -65,6 +67,9 @@ class AquariumAdapter(private val context: Context, var aquariumList: MutableLis
         holder.txt_id.text = aquariumList[position].id.toString()
         holder.txt_manufacturer.text = aquariumList[position].manufacturer
         holder.txt_volume.text = aquariumList[position].volume.toString()
+        holder.txt_height.text = aquariumList[position].height.toString()
+        holder.txt_width.text = aquariumList[position].width.toString()
+        holder.txt_length.text = aquariumList[position].length.toString()
     }
 
 }

@@ -18,6 +18,8 @@ import com.example.mobileapplication.viewmodels.CreateNewFeedingViewModel
 import kotlinx.android.synthetic.main.activity_create_new_aquarium.*
 import kotlinx.android.synthetic.main.activity_create_new_feeding.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -49,8 +51,13 @@ class CreateNewFeedingActivity : AppCompatActivity() {
     }
 
     fun createFeeding(){
+        val date = Calendar.getInstance().time
+        val formatDate = SimpleDateFormat("dd.MM.yyyy")
+        val formatTime = SimpleDateFormat("HH:mm")
         val request = FeedingRequest(editTextKind.text.toString(), editTextDose.text.toString().toInt(),
-            editTextAquaId.selectedItem.toString().toInt(), Calendar.getInstance().getTime())
+            editTextAquaId.selectedItem.toString().toInt(), formatDate.format(date),
+            formatTime.format(date)
+        )
         viewModel.createAquarium(applicationContext, request)
     }
 

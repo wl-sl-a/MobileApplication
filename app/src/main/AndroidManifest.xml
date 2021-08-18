@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApplication">
-        <activity android:name=".ui.CreateNewFeedingActivity"></activity>
+        <activity android:name=".ui.EditFeedingActivity"></activity>
+        <activity android:name=".ui.CreateNewFeedingActivity" />
         <activity android:name=".ui.FeedingActivity" />
         <activity android:name=".ui.MenuActivity" />
         <activity android:name=".ui.EditAquariumActivity" />

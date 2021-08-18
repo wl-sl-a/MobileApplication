@@ -24,11 +24,23 @@ class EditAquariumActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edit_aquarium)
         var id = getIntent().getExtras()?.getString("id");
         var manufacturer = getIntent().getExtras()?.getString("manufacturer");
+        var volume = getIntent().getExtras()?.getString("volume");
+        var height = getIntent().getExtras()?.getString("height");
+        var width = getIntent().getExtras()?.getString("width");
+        var length = getIntent().getExtras()?.getString("length");
 
         val editTextId = findViewById<View>(R.id.editId) as EditText
         editTextId.setText(id)
         val editTextManufacturer = findViewById<View>(R.id.editManufacturer) as EditText
         editTextManufacturer.setText(manufacturer)
+        val editTextVolume = findViewById<View>(R.id.editVolume) as EditText
+        editTextVolume.setText(volume)
+        val editTextHeight = findViewById<View>(R.id.editHeight) as EditText
+        editTextHeight.setText(height)
+        val editTextWidth = findViewById<View>(R.id.editWidth) as EditText
+        editTextWidth.setText(width)
+        val editTextLength = findViewById<View>(R.id.editLength) as EditText
+        editTextLength.setText(length)
         viewModel = ViewModelProvider(this).get(EditAquariumViewModel::class.java)
 
         editAquariumObservable()
