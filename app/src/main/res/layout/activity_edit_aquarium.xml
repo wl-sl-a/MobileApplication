@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Enter id"
+        android:hint="@string/enter_id"
         android:layout_margin="10dp"
         />
 
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editId"
-        android:hint="Enter Manufacturer"
+        android:hint="@string/enter_manufacturer"
         android:layout_margin="10dp"
         />
 
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editManufacturer"
-        android:hint="Enter Volume"
+        android:hint="@string/enter_volume"
         android:layout_margin="10dp"
         />
 
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editVolume"
-        android:hint="Enter Length"
+        android:hint="@string/enter_length"
         android:layout_margin="10dp"
         />
 
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editLength"
-        android:hint="Enter Width"
+        android:hint="@string/enter_width"
         android:layout_margin="10dp"
         />
 
@@ -62,7 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editWidth"
-        android:hint="Enter Height"
+        android:hint="@string/enter_height"
         android:layout_margin="10dp"
         />
 
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editHeight"
-        android:hint="Edit"
+        android:hint="@string/edit"
         android:textStyle="bold"
         android:layout_margin="10dp"
         />

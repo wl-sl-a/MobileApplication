@@ -19,10 +19,11 @@
         android:id="@+id/aquaButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:height="70dp"
-        android:hint="Aquariums"
-        android:textStyle="bold"
+        android:hint="@string/aquariums"
+        android:textSize="18dp"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image" />
@@ -31,24 +32,41 @@
         android:id="@+id/feedingButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:height="70dp"
-        android:hint="Feedings"
-        android:textStyle="bold"
+        android:hint="@string/feedings"
+        android:textSize="18dp"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/aquaButton" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:height="70dp"
+        android:hint="@string/calculate_dose"
+        android:textSize="18dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feedingButton" />
 
     <Button
         android:id="@+id/rezervButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:height="70dp"
-        android:hint="Rezerv"
-        android:textStyle="bold"
+        android:hint="@string/feedings_settings"
+        android:textSize="18dp"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feedingButton" />
+        app:layout_constraintTop_toBottomOf="@id/calcButton" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

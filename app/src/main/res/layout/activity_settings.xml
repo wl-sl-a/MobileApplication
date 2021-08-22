@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".ui.SettingsActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alarm_time_text_m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Set Morning Time"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:onClick="showTimerPickerFragment"
+        android:text="Set Morning Time"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:background="#ffffff"
+        android:onClick="cancelAlarm"
+        android:text="Cancel"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_time_text"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/alarm_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Set Evening Time"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:onClick="showTimerPickerFragment"
+        android:text="Set Morning Time"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="292dp"
+        android:background="#ffffff"
+        android:onClick="cancelAlarm"
+        android:text="Cancel"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="46dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

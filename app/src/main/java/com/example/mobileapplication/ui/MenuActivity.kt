@@ -35,7 +35,12 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent);
         }
         rezervButton.setOnClickListener {
-
+            val intent = Intent(applicationContext, SettingsActivity::class.java)
+            startActivity(intent);
+        }
+        calcButton.setOnClickListener {
+            val intent = Intent(applicationContext, CalculateDoseActivity::class.java)
+            startActivity(intent);
         }
     }
 

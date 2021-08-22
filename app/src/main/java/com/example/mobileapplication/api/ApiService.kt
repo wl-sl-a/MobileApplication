@@ -3,6 +3,7 @@ package com.example.mobileapplication.api
 import com.example.mobileapplication.api.models.Aquarium
 import com.example.mobileapplication.api.models.Feeding
 import com.example.mobileapplication.api.requests.AquariumRequest
+import com.example.mobileapplication.api.requests.CalculateDoseRequest
 import com.example.mobileapplication.api.requests.FeedingRequest
 import com.example.mobileapplication.api.requests.LoginRequest
 import com.example.mobileapplication.api.responses.AquariumResponse
@@ -21,6 +22,9 @@ interface ApiService {
 
     @GET(Constants.AQUARIUMS_URL+"/{id}")
     fun getAquarium(@Path("id") id: Int): Call<AquariumResponse>
+
+    @GET(Constants.AQUARIUMS_URL+"/search/{param}")
+    fun searchAquarium(@Path("param") param: String): Call<MutableList<Aquarium>>
 
     @POST(Constants.AQUARIUMS_URL)
     fun addAquarium(@Body request: AquariumRequest): Call<AquariumResponse>
@@ -45,4 +49,7 @@ interface ApiService {
 
     @DELETE(Constants.FEEDINGS_URL+"/{id}")
     fun deleteFeeding(@Path("id") id: Int): Call<FeedingResponse>
+
+    @POST(Constants.FEEDINGS_URL+"/calculate")
+    fun calculateDose(@Body request: CalculateDoseRequest): Call<Double>
 }

@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Enter manufacturer"
+        android:hint="@string/enter_manufacturer"
         android:layout_margin="10dp"
         />
 
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextManufacturer"
-        android:hint="Enter Volume"
+        android:hint="@string/enter_volume"
         android:layout_margin="10dp"
         />
 
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextVolume"
-        android:hint="Enter Length"
+        android:hint="@string/enter_length"
         android:layout_margin="10dp"
         />
 
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextLength"
-        android:hint="Enter Width"
+        android:hint="@string/enter_width"
         android:layout_margin="10dp"
         />
 
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextWidth"
-        android:hint="Enter Height"
+        android:hint="@string/enter_height"
         android:layout_margin="10dp"
         />
 
@@ -62,7 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextHeight"
-        android:hint="Create"
+        android:hint="@string/create"
         android:textStyle="bold"
         android:layout_margin="10dp"
         />

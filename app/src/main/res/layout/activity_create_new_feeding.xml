@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Enter kind of feed"
+        android:hint="@string/enter_kind_of_feed"
         android:layout_margin="10dp"
         />
 
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextKind"
-        android:hint="Enter Dose"
+        android:hint="@string/enter_dose"
         android:layout_margin="10dp"
         />
 
@@ -30,7 +30,7 @@
         android:id="@+id/label_spiner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Aquarium:"
+        android:text="@string/select_aquarium"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="32dp"
-        android:hint="Create"
+        android:hint="@string/create"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"

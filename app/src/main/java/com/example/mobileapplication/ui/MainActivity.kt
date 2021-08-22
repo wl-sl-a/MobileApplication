@@ -4,6 +4,9 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
@@ -47,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         dialog = SpotsDialog.Builder().setCancelable(true).setContext(this).build()
 
         initViewModel()
-
+        search()
         btnAdd.setOnClickListener {
             startActivity(Intent(this@MainActivity, CreateNewAquariumActivity::class.java))
             Toast.makeText(this@MainActivity, AquariumManager(this).fetchId(), Toast.LENGTH_LONG).show()
@@ -74,6 +77,20 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, LoginActivity::class.java)
         startActivity(intent);
         this@MainActivity.finish()
+    }
+
+    private fun search() {
+        searchEditText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {}
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                if(!TextUtils.isEmpty(searchEditText.text.toString())) {
+                    viewModel.search(applicationContext, searchEditText.text.toString())
+                } else {
+                    viewModel.getAquariumsList(applicationContext)
+                }
+            }
+        })
     }
 
     fun initViewModel(){

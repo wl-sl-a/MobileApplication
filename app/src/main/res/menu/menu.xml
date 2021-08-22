@@ -5,5 +5,5 @@
         android:id="@+id/action_fav"
         android:icon="@drawable/ic_baseline_input_24"
         app:showAsAction=""
-        android:title="LogOut" />
+        android:title="@string/logout" />
 </menu>

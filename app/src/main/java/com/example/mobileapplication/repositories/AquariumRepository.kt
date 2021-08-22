@@ -29,4 +29,8 @@ class AquariumRepository {
     fun editAquarium(context: Context, aquariumId: Int, request: AquariumRequest): Call<AquariumResponse>{
         return apiClient.getApiService(context).editAquarium(aquariumId, request)
     }
+
+    fun searchAquarium(context: Context, param: String): Call<MutableList<Aquarium>>{
+        return apiClient.getApiService(context).searchAquarium(param)
+    }
 }

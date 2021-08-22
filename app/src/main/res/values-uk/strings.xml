@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Akvaario</string>
+    <string name="select_aquarium">Оберіть акваріум:</string>
+    <string name="enter_id">Введіть id</string>
+    <string name="aquarium_id">Id акваріума:</string>
+    <string name="id">id</string>
+    <string name="manufacturer">Виробник:</string>
+    <string name="volume">Об\'єм:</string>
+    <string name="height">Висота:</string>
+    <string name="width">Ширина:</string>
+    <string name="length">Довжина:</string>
+    <string name="feeding_id">Id годування:</string>
+    <string name="kind">Вид:</string>
+    <string name="dose">Доза:</string>
+    <string name="aquarium_id_l">Id акваріума</string>
+    <string name="date">Дата:</string>
+    <string name="time">Час:</string>
+    <string name="enter_manufacturer">Введіть виробника</string>
+    <string name="enter_volume">Введіть об\'єм</string>
+    <string name="enter_length">Введіть довжину</string>
+    <string name="enter_width">Введіть ширину</string>
+    <string name="enter_height">Введіть висоту</string>
+    <string name="create">Створити</string>
+    <string name="enter_kind_of_feed">Введіть вид годування</string>
+    <string name="enter_dose">Введіть дозу</string>
+    <string name="edit">Редагувати</string>
+    <string name="enter_kind_of_feeding">Введіть вид годування</string>
+    <string name="username">Логін</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Увійти</string>
+    <string name="search_aquarium">Пошук акваріуму</string>
+    <string name="aquariums">Акваріуми</string>
+    <string name="feedings">Облік годування</string>
+    <string name="feedings_settings">Налаштування годування</string>
+    <string name="manufacturer_l">виробник</string>
+    <string name="volume_l">об\'єм</string>
+    <string name="height_l">висота</string>
+    <string name="width_l">ширина</string>
+    <string name="length_l">довжина</string>
+    <string name="kind_of_feed">Вид годування</string>
+    <string name="dose_l">Доза</string>
+    <string name="date_l">дата</string>
+    <string name="time_l">час</string>
+    <string name="logout">Вихід</string>
+    <string name="calculate_dose">Калькулятор дозування</string>
+    <string-array name="calcSpinner">
+        <item>менше за два тижні</item>
+        <item>два-чотири тижня</item>
+        <item>один-два місяці</item>
+        <item>два місяці - момент статевого поділу</item>
+        <item>момент статевого поділу - повне дозрівання</item>
+        <item>здатна до розмноження</item>
+    </string-array>
+</resources>

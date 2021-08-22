@@ -42,6 +42,22 @@ class MainActivityViewModel: ViewModel() {
             })
     }
 
+    fun search(context: Context, param: String) {
+        repository.searchAquarium(context, param)
+            .enqueue(object : Callback<MutableList<Aquarium>> {
+                override fun onFailure(call: Call<MutableList<Aquarium>>, t: Throwable) {
+                    recyclerListData.postValue(null)
+                }
+                override fun onResponse(call: Call<MutableList<Aquarium>>, response: Response<MutableList<Aquarium>>) {
+                    if(response.isSuccessful) {
+                        recyclerListData.postValue(response.body())
+                    } else {
+                        recyclerListData.postValue(null)
+                    }
+                }
+            })
+    }
+
     fun deleteAquariumObserverable(): MutableLiveData<AquariumResponse?>{
         return deletedAquariumLiveData
     }
